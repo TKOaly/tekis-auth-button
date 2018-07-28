@@ -1,4 +1,4 @@
-src/css/build/*.css
-src/css/build/*.css.map
+src/css/*.css
+src/css/*.css.map
 .DS_Store
 node_modules

@@ -70,6 +70,11 @@ a {
   }
   &.logoutBtn {
     background-color: white;
+    &:before {
+      @include fa-icon;
+      @extend .fas;
+      content: fa-content($fa-var-sign-out-alt + "\00a0\00a0");
+    }
     &.logoutBtn-red {
       background-color: rgb(221, 67, 67);
     }
