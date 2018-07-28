@@ -1,0 +1,78 @@
+$btn-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+@import "fontawesome";
+@import "solid";
+@import "brands";
+
+$btn-height: 40px;
+$black-image: url("/img/tkoaly_black.svg");
+$color-image: url("/img/tkoaly.svg");
+
+a {
+  &.loginBtn,
+  &.logoutBtn {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    height: $btn-height;
+    margin: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: $btn-height;
+    text-align: center;
+    font-family: Arial;
+    box-shadow: $btn-box-shadow;
+    border-radius: 5px;
+    &:visited,
+    &:active,
+    &:hover {
+      text-decoration: none;
+    }
+    &.dark {
+      background-color: rgb(51, 51, 51);
+      color: white;
+    }
+    &.light {
+      background-color: white;
+      color: black;
+    }
+    &.yellow {
+      background-color: #fc3;
+      color: black;
+    }
+    &.green {
+      background-color: rgb(68, 163, 68);
+      color: white;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.bg-image,
+    &.bg-image-bw {
+      background-clip: border-box;
+      background-repeat: no-repeat;
+      padding-left: 50px !important;
+    }
+    &.bg-image-bw {
+      background-image: $black-image;
+    }
+    &.bg-image {
+      background-image: $color-image;
+    }
+  }
+  &.loginBtn {
+    &:before {
+      @include fa-icon;
+      @extend .fas;
+      content: fa-content($fa-var-lock + "\00a0\00a0");
+    }
+  }
+  &.logoutBtn {
+    background-color: white;
+    &.logoutBtn-red {
+      background-color: rgb(221, 67, 67);
+    }
+    color: white;
+  }
+}
